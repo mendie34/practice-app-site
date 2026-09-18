@@ -20,18 +20,8 @@
   "url": "https://thepracticeapp.co.uk/",
   "description": "Structured golf practice app for the range, short game and putting green, with strokes-gained scoring, 5 putting drills, a wedge yardage builder and coach connection.",
   "offers": [
-    {
-      "@type": "Offer",
-      "price": "4.99",
-      "priceCurrency": "GBP",
-      "name": "Monthly"
-    },
-    {
-      "@type": "Offer",
-      "price": "39",
-      "priceCurrency": "GBP",
-      "name": "Annual"
-    }
+    { "@type": "Offer", "price": "4.99", "priceCurrency": "GBP", "name": "Monthly" },
+    { "@type": "Offer", "price": "39", "priceCurrency": "GBP", "name": "Annual" }
   ]
 }
 </script>
@@ -49,6 +39,10 @@
   </div>
 </nav>
 <div class="tabbar-wrap">
+  <button class="tabbar-toggle" id="tabbarToggle" type="button" aria-expanded="false" aria-controls="tabbar">
+    <span id="tabbarToggleLabel">Menu</span>
+    <svg class="tabbar-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+  </button>
   <div class="tabbar" id="tabbar">
     <a href="index.html" class="tab-pill" data-tab="home">Home</a>
     <a href="index.html#features" class="tab-pill" data-tab="features">Features</a>

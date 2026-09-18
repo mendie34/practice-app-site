@@ -120,6 +120,36 @@
   .tab-pill.active{color:var(--cream);border-bottom-color:var(--flag);}
   section[id]{scroll-margin-top:100px;}
 
+  .tabbar-toggle{
+    display:none;
+    width:100%;
+    align-items:center;justify-content:space-between;
+    background:transparent;border:none;cursor:pointer;
+    font-family:'JetBrains Mono',monospace;font-size:12.5px;letter-spacing:0.5px;
+    color:var(--cream);padding:13px 24px;
+    text-transform:uppercase;
+  }
+  .tabbar-toggle-icon{width:15px;height:15px;flex-shrink:0;transition:transform 0.2s ease;}
+  .tabbar-wrap.open .tabbar-toggle-icon{transform:rotate(180deg);}
+
+  @media (max-width:640px){
+    .tabbar-toggle{display:flex;}
+    .tabbar{
+      display:none;
+      flex-direction:column;gap:0;
+      max-width:none;overflow-x:visible;
+      padding:0 24px 6px;
+    }
+    .tabbar-wrap.open .tabbar{display:flex;}
+    .tab-pill{
+      padding:13px 0 13px 10px;
+      border-bottom:1px solid var(--border);
+      border-left:2px solid transparent;
+    }
+    .tab-pill:last-child{border-bottom:none;}
+    .tab-pill.active{border-bottom-color:var(--border);border-left-color:var(--flag);background:rgba(228,219,194,0.04);}
+  }
+
   /* ---------- HERO ---------- */
   .hero{
     padding:88px 0 60px;

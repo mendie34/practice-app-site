@@ -15,62 +15,13 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Do I need a launch monitor to use the app?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Distance Control works great with a rangefinder or by pacing off shots, and there's a self-rated 1\u20135 mode for sessions where you can't measure exact carry \u2014 you'll still see useful trends, just without strokes-gained on those sessions."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is \"strokes gained\" and why does it matter?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Strokes gained compares your result to a fixed baseline (from 30-handicap to PGA Tour) rather than just tracking raw distance or make percentage. It's the same method tour statisticians use, and it lets you compare a putt, a wedge shot and a drive on the same scale."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "When is the app launching, and on which platforms?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The Practice App is in final testing ahead of launch on iOS and as a web app, with Android to follow. Join the waitlist and you'll get an email the moment it's available to download."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I use it for Compete mode with friends who don't have accounts?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes \u2014 Compete mode supports 2\u20134 players on one device for a head-to-head round. Only the host needs an account; the others just take their turns."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How does connecting with a coach work?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "From Settings, search for your coach and send a connection request. Once they approve it, your practice data \u2014 sessions, strokes gained, trends \u2014 is visible on their Coach dashboard. You can withdraw the connection at any time."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is my data private?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Your practice data is tied to your account and only visible to a coach you've explicitly connected with. You can export or delete your data from Settings at any time."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does it work in metric or imperial units?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Both \u2014 switch between yards/feet and metres in Settings at any time. Past sessions keep the units they were logged in for consistency."
-      }
-    }
+    { "@type": "Question", "name": "Do I need a launch monitor to use the app?", "acceptedAnswer": { "@type": "Answer", "text": "No. Distance Control works great with a rangefinder or by pacing off shots, and there's a self-rated 1\u20135 mode for sessions where you can't measure exact carry \u2014 you'll still see useful trends, just without strokes-gained on those sessions." } },
+    { "@type": "Question", "name": "What is \"strokes gained\" and why does it matter?", "acceptedAnswer": { "@type": "Answer", "text": "Strokes gained compares your result to a fixed baseline (from 30-handicap to PGA Tour) rather than just tracking raw distance or make percentage. It's the same method tour statisticians use, and it lets you compare a putt, a wedge shot and a drive on the same scale." } },
+    { "@type": "Question", "name": "When is the app launching, and on which platforms?", "acceptedAnswer": { "@type": "Answer", "text": "The Practice App is in final testing ahead of launch on iOS and as a web app, with Android to follow. Join the waitlist and you'll get an email the moment it's available to download." } },
+    { "@type": "Question", "name": "Can I use it for Compete mode with friends who don't have accounts?", "acceptedAnswer": { "@type": "Answer", "text": "Yes \u2014 Compete mode supports 2\u20134 players on one device for a head-to-head round. Only the host needs an account; the others just take their turns." } },
+    { "@type": "Question", "name": "How does connecting with a coach work?", "acceptedAnswer": { "@type": "Answer", "text": "From Settings, search for your coach and send a connection request. Once they approve it, your practice data \u2014 sessions, strokes gained, trends \u2014 is visible on their Coach dashboard. You can withdraw the connection at any time." } },
+    { "@type": "Question", "name": "Is my data private?", "acceptedAnswer": { "@type": "Answer", "text": "Your practice data is tied to your account and only visible to a coach you've explicitly connected with. You can export or delete your data from Settings at any time." } },
+    { "@type": "Question", "name": "Does it work in metric or imperial units?", "acceptedAnswer": { "@type": "Answer", "text": "Both \u2014 switch between yards/feet and metres in Settings at any time. Past sessions keep the units they were logged in for consistency." } }
   ]
 }
 </script>
@@ -88,6 +39,10 @@
   </div>
 </nav>
 <div class="tabbar-wrap">
+  <button class="tabbar-toggle" id="tabbarToggle" type="button" aria-expanded="false" aria-controls="tabbar">
+    <span id="tabbarToggleLabel">Menu</span>
+    <svg class="tabbar-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+  </button>
   <div class="tabbar" id="tabbar">
     <a href="index.html" class="tab-pill" data-tab="home">Home</a>
     <a href="index.html#features" class="tab-pill" data-tab="features">Features</a>
