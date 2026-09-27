@@ -1,150 +1,129 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Pricing — The Practice App</title>
-<meta name="description" content="The Practice App pricing: £4.99/month or £39/year for players, plus Coach plans from £500/year covering up to 20 or unlimited connected players.">
+<meta name="description" content="The Practice App pricing: £4.99 a month or £39 a year with a free trial, plus coach plans from £500 a year that give every connected player free access.">
 <link rel="canonical" href="https://thepracticeapp.co.uk/pricing.html">
+<meta name="theme-color" content="#1C1C1A">
+<link rel="icon" href="images/logo.jpg">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Pricing — The Practice App">
-<meta property="og:description" content="The Practice App pricing: £4.99/month or £39/year for players, plus Coach plans from £500/year covering up to 20 or unlimited connected players.">
+<meta property="og:description" content="The Practice App pricing: £4.99 a month or £39 a year with a free trial, plus coach plans from £500 a year that give every connected player free access.">
 <meta property="og:url" content="https://thepracticeapp.co.uk/pricing.html">
 <meta property="og:site_name" content="The Practice App">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://thepracticeapp.co.uk/images/photo-range-distance-control.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Pricing — The Practice App">
-<meta name="twitter:description" content="The Practice App pricing: £4.99/month or £39/year for players, plus Coach plans from £500/year covering up to 20 or unlimited connected players.">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="styles.css">
+<meta name="twitter:description" content="The Practice App pricing: £4.99 a month or £39 a year with a free trial, plus coach plans from £500 a year that give every connected player free access.">
+<meta name="twitter:image" content="https://thepracticeapp.co.uk/images/photo-range-distance-control.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="site.css">
 </head><body data-page="pricing">
-<!-- ============ NAV ============ -->
-<nav class="nav">
-  <div class="nav-inner">
-    <a href="index.html" class="brand"><img src="images/logo.jpg" alt=""/> THE PRACTICE APP</a>
-    <div class="nav-cta">
-      <a href="index.html#login" class="navbtn">Log In</a>
-      <a href="#waitlist" class="navbtn solid">Get Notified</a>
-    </div>
-  </div>
-</nav>
-<div class="tabbar-wrap">
-  <button class="tabbar-toggle" id="tabbarToggle" type="button" aria-expanded="false" aria-controls="tabbar">
-    <span id="tabbarToggleLabel">Menu</span>
-    <svg class="tabbar-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-  </button>
-  <div class="tabbar" id="tabbar">
-    <a href="index.html" class="tab-pill" data-tab="home">Home</a>
-    <a href="index.html#features" class="tab-pill" data-tab="features">Features</a>
-    <a href="scoring.html" class="tab-pill" data-tab="scoring">Scoring</a>
-    <a href="why-practice.html" class="tab-pill" data-tab="why">Why Practice</a>
-    <a href="pricing.html" class="tab-pill" data-tab="pricing">Pricing</a>
-    <a href="coaches.html" class="tab-pill" data-tab="coaches">Coaches</a>
-    <a href="faq.html" class="tab-pill" data-tab="faq">FAQ</a>
-    <a href="contact.html" class="tab-pill" data-tab="contact">Contact</a>
-  </div>
-</div>
-<!-- ============ PRICING ============ -->
-<section class="section" id="pricing">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-range" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+    <symbol id="i-yard" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="8" x2="3" y2="16"/><line x1="8" y1="9" x2="8" y2="15"/><line x1="13" y1="9" x2="13" y2="15"/><line x1="18" y1="8" x2="18" y2="16"/><line x1="21" y1="8" x2="21" y2="16"/></symbol>
+    <symbol id="i-short" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 L17 5"/><path d="M17 5 L21 3 L19 7 Z" fill="currentColor" stroke="none"/><circle cx="6" cy="19" r="1.4" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-putt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="3" x2="12" y2="21"/><path d="M12 3 L19 6 L12 9 Z" fill="currentColor" stroke="none"/><ellipse cx="12" cy="21" rx="7" ry="1.6"/></symbol>
+    <symbol id="i-compete" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18 L9 21 L15 21 L15 18"/><path d="M6 4 L18 4 L18 10 A6 6 0 0 1 6 10 Z"/><path d="M6 6 L3 6 L3 8 A3 3 0 0 0 6 11"/><path d="M18 6 L21 6 L21 8 A3 3 0 0 1 18 11"/></symbol>
+    <symbol id="i-analysis" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19 L4 13"/><path d="M10 19 L10 8"/><path d="M16 19 L16 4"/></symbol>
+    <symbol id="i-matrix" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+    <symbol id="i-course" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><path d="M8 16 L10 18 L16 15"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7 L12 12 L16 14"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 L10 17 L19 7"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7 L12 13 L21 7"/></symbol>
+    <symbol id="i-people" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20 a6.5 6.5 0 0 1 13 0"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14.2 a5 5 0 0 1 5.5 5.8"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5 H20 V16 H9 L5 20 V16 H4 Z"/></symbol>
+    <symbol id="i-shuffle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7 H7 L15 17 H21"/><path d="M3 17 H7 L9.5 14"/><path d="M13 10 L15 7 H21"/><path d="M18 4 L21 7 L18 10"/><path d="M18 14 L21 17 L18 20"/></symbol>
+  </defs>
+</svg>
+
+<nav>
   <div class="wrap">
-    <div class="eyebrow">Pricing</div>
-    <h1 class="h2">Try it for free, then have full access for less than a dozen Pro V1s a year.</h1>
-    <p class="lede" style="margin-top:14px;">The Practice App is finishing up testing ahead of its App Store and Play Store launch. Pricing below is planned for launch — join the waitlist and we'll email you the moment it's live, plus an early-access discount. One plan, full access either way — monthly or annual is just how you'd rather pay.</p>
-
-    <div class="pricing-grid pricing-grid-2">
-      <div class="price-card">
-        <div class="price-name">Monthly</div>
-        <div class="price-amount">£4.99 <span>/ month</span></div>
-        <ul class="price-list">
-          <li>Free trial to start, no card required</li>
-          <li>All 5 putting drills + on-course tracking</li>
-          <li>Wedge Matrix yardage builder</li>
-          <li>Full strokes-gained analysis &amp; trend graphs</li>
-          <li>Compete mode with friends</li>
-          <li>Connect with your coach</li>
-        </ul>
-        <a href="#waitlist" class="btn btn-outline">Start Free Trial</a>
-      </div>
-      <div class="price-card featured">
-        <div class="price-tag">SAVE 35%</div>
-        <div class="price-name">Annual</div>
-        <div class="price-amount">£39 <span>/ year</span></div>
-        <ul class="price-list">
-          <li>Free trial to start, no card required</li>
-          <li>All 5 putting drills + on-course tracking</li>
-          <li>Wedge Matrix yardage builder</li>
-          <li>Full strokes-gained analysis &amp; trend graphs</li>
-          <li>Compete mode with friends</li>
-          <li>Connect with your coach</li>
-        </ul>
-        <a href="#waitlist" class="btn btn-primary">Start Free Trial</a>
-      </div>
-    </div>
-    <div class="coming-soon-banner">Not in the App Store yet — pricing shown is planned at launch and may change. Early waitlist members lock in a discount.</div>
+    <a class="brand" href="index.html"><img src="images/logo.jpg" alt="">THE PRACTICE APP</a>
+    <div class="navlinks"><a href="scoring.html">Scoring</a><a href="why-practice.html">Why practice</a><a href="coaches.html">Coaches</a><a href="pricing.html" aria-current="page">Pricing</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div>
+    <a class="btn btn-primary" href="#join">Join the waitlist</a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button>
   </div>
+  <div class="wrap mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="scoring.html">Scoring</a><a href="why-practice.html">Why practice</a><a href="coaches.html">Coaches</a><a href="pricing.html" aria-current="page">Pricing</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div>
+</nav>
 
-  <div class="wrap" style="margin-top:76px;">
-    <div class="eyebrow">Pricing for coaches</div>
-    <h2 class="h2">One price for you, free access for every player you coach</h2>
-    <p class="lede" style="margin-top:14px;">Coach plans are billed annually to you and cover full access for every player you connect with — none of them ever need to pay individually.</p>
+<header class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">Pricing</span>
+    <h1>Less than a dozen Pro V1s <span class="g">a year.</span></h1>
+    <p class="lead">Start with a free trial, no card needed. One plan, full access. Monthly or annual is just how you'd rather pay.</p>
+  </div>
+</header>
 
-    <div class="pricing-grid" style="margin-top:36px;">
-      <div class="price-card">
-        <div class="price-name">Coach</div>
-        <div class="price-amount">£500 <span>/ year</span></div>
-        <ul class="price-list">
-          <li>Up to 20 players get free full access</li>
-          <li>Full Coach dashboard — players, requests, compare</li>
-          <li>Per-player insights &amp; suggested focus areas</li>
-          <li>Coach Summary one-pager, per player</li>
-        </ul>
-        <a href="#waitlist" class="btn btn-outline">Get Notified</a>
+<section style="padding-top:0">
+  <div class="wrap" style="display:flex;flex-direction:column;gap:18px">
+    <div class="plans wide cards2">
+      <div class="plan">
+        <span class="eyebrow">Monthly</span>
+        <div class="price">£4.99<small>/ month</small></div>
+        <ul class="checks"><li><svg><use href="#i-check"/></svg><span>All drills: range, wedges, short game, putting</span></li><li><svg><use href="#i-check"/></svg><span>Par scoring and Strokes Gained analysis</span></li><li><svg><use href="#i-check"/></svg><span>Compete mode and friend comparisons</span></li><li><svg><use href="#i-check"/></svg><span>Connect with your coach</span></li></ul>
+        <a class="btn btn-ghost" href="#join">Start free trial</a>
       </div>
-      <div class="price-card featured">
-        <div class="price-tag">BEST FOR ACADEMIES</div>
-        <div class="price-name">Coach — Unlimited</div>
-        <div class="price-amount">£1,000 <span>/ year</span></div>
-        <ul class="price-list">
-          <li>Unlimited players get free full access</li>
-          <li>Everything in the Coach plan</li>
-          <li>Compare up to 5 players side-by-side</li>
-          <li>Priority support for academy &amp; team accounts</li>
-        </ul>
-        <a href="#waitlist" class="btn btn-primary">Get Notified</a>
+      <div class="plan best">
+        <span class="badge">SAVE 35%</span>
+        <span class="eyebrow">Annual</span>
+        <div class="price">£39<small>/ year</small></div>
+        <ul class="checks"><li><svg><use href="#i-check"/></svg><span>All drills: range, wedges, short game, putting</span></li><li><svg><use href="#i-check"/></svg><span>Par scoring and Strokes Gained analysis</span></li><li><svg><use href="#i-check"/></svg><span>Compete mode and friend comparisons</span></li><li><svg><use href="#i-check"/></svg><span>Connect with your coach</span></li></ul>
+        <a class="btn btn-primary" href="#join">Start free trial</a>
       </div>
     </div>
-    <div class="coming-soon-banner">Have more than 20 players and want something in between? <a href="contact.html" style="color:var(--sand);">Get in touch</a> — happy to talk through a plan that fits your group.</div>
+    <p class="note">Planned launch pricing, which may change. Waitlist members lock in an early-access discount.</p>
   </div>
 </section>
 
-<!-- ============ WAITLIST / FOOTER CTA ============ -->
-<section class="section-tight" id="waitlist" style="background:var(--turf);border-top:1px solid var(--border);">
-  <div class="wrap" style="text-align:center;">
-    <h2 class="h2">Be first to know when it's live</h2>
-    <p class="lede" style="margin:14px auto 26px;">No spam — one email when The Practice App hits the App Store, plus your early-access discount code.</p>
-    <form style="max-width:440px;margin:0 auto;display:flex;gap:10px;flex-wrap:wrap;justify-content:center;" name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field-2" onsubmit="handleWaitlist(event)">
-      <input type="hidden" name="form-name" value="waitlist"/>
-      <p style="position:absolute;left:-9999px;" aria-hidden="true"><label>Don't fill this out: <input name="bot-field-2"/></label></p>
-      <input type="email" name="email" required placeholder="you@example.com" style="flex:1;min-width:220px;background:var(--turf-dark);border:1px solid var(--border);border-radius:8px;color:var(--cream);font-family:'Inter',sans-serif;font-size:14px;padding:13px 14px;"/>
-      <button class="btn btn-primary" type="submit">Notify Me</button>
-    </form>
+<section class="divider" id="coach">
+  <div class="wrap" style="display:flex;flex-direction:column;gap:18px">
+    <div class="sec-head" style="margin-bottom:26px"><span class="eyebrow">For coaches</span><h2>You pay once. Your players never do.</h2><p class="lead">Billed annually. Every player you connect gets full access free.</p></div>
+    <div class="plans wide cards2">
+      <div class="plan">
+        <span class="eyebrow">Coach</span>
+        <div class="price">£500<small>/ year</small></div>
+        <ul class="checks"><li><svg><use href="#i-check"/></svg><span>Up to 20 players, free full access</span></li><li><svg><use href="#i-check"/></svg><span>Coach dashboard and requests</span></li><li><svg><use href="#i-check"/></svg><span>Per-player focus areas</span></li><li><svg><use href="#i-check"/></svg><span>Coach Summary one-pager</span></li></ul>
+        <a class="btn btn-ghost" href="#join">Get notified</a>
+      </div>
+      <div class="plan best">
+        <span class="badge">ACADEMIES</span>
+        <span class="eyebrow">Coach unlimited</span>
+        <div class="price">£1,000<small>/ year</small></div>
+        <ul class="checks"><li><svg><use href="#i-check"/></svg><span>Unlimited players, free full access</span></li><li><svg><use href="#i-check"/></svg><span>Everything in Coach</span></li><li><svg><use href="#i-check"/></svg><span>Compare up to 5 players side by side</span></li><li><svg><use href="#i-check"/></svg><span>Priority support</span></li></ul>
+        <a class="btn btn-primary" href="#join">Get notified</a>
+      </div>
+    </div>
+    <p class="note">More than 20 players but not an academy? <a href="contact.html" style="color:var(--green-lt)">Get in touch</a> and we'll find a plan that fits.</p>
+  </div>
+</section>
+
+<section class="cta" id="join">
+  <div class="wrap">
+    <div class="cta-box">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <span class="eyebrow">Launching soon</span>
+        <h2>Your next range session could have a score.</h2>
+      </div>
+      <div>
+        <form id="waitlist" name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field-2">
+          <input type="hidden" name="form-name" value="waitlist">
+          <p class="hp"><label>Leave blank <input name="bot-field-2"></label></p>
+          <input id="email" name="email" type="email" required placeholder="you@email.com" aria-label="Email address">
+          <button class="btn btn-primary" type="submit">Join the waitlist</button>
+        </form>
+        <p class="formnote" id="formnote">Early members get launch pricing locked in.</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <footer>
-  <div class="wrap footer-inner">
-    <a href="index.html" class="brand"><img src="images/logo.jpg" alt="" style="width:20px;height:20px;"/> THE PRACTICE APP</a>
-    <div class="footer-links">
-      <a href="index.html#features">Features</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="coaches.html">Coaches</a>
-      <a href="faq.html">FAQ</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <div class="footer-note">© 2026 The Practice App. Screenshots shown are from the live product build.</div>
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="images/logo.jpg" alt="">THE PRACTICE APP</a>
+    <a href="mailto:info@thepracticeapp.co.uk">info@thepracticeapp.co.uk</a>
+    <div class="links"><a href="scoring.html">Scoring</a><a href="why-practice.html">Why practice</a><a href="coaches.html">Coaches</a><a href="pricing.html">Pricing</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div>
   </div>
 </footer>
-<div id="toast"></div>
-
-<div id="lightbox" onclick="closeLightbox()">
-  <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Close">&times;</button>
-  <img id="lightbox-img" src="" alt=""/>
-</div>
-
-<script src="script.js"></script>
+<script src="site.js"></script>
 </body></html>

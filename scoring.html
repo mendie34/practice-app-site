@@ -1,166 +1,117 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>How Scoring Works — Strokes Gained & Par-Style Scoring | The Practice App</title>
-<meta name="description" content="How The Practice App scores your golf practice: strokes-gained baselines from 30-handicap to PGA Tour, plus Eagle/Birdie/Par/Bogey/Double scoring, with the real proximity data behind every band.">
+<title>How Scoring Works — Strokes Gained & Par Scoring | The Practice App</title>
+<meta name="description" content="How The Practice App scores golf practice: Strokes Gained from 30 handicap to PGA Tour, plus Eagle to Double par scoring with bands for every ability level.">
 <link rel="canonical" href="https://thepracticeapp.co.uk/scoring.html">
+<meta name="theme-color" content="#1C1C1A">
+<link rel="icon" href="images/logo.jpg">
 <meta property="og:type" content="website">
-<meta property="og:title" content="How Scoring Works — Strokes Gained & Par-Style Scoring | The Practice App">
-<meta property="og:description" content="How The Practice App scores your golf practice: strokes-gained baselines from 30-handicap to PGA Tour, plus Eagle/Birdie/Par/Bogey/Double scoring, with the real proximity data behind every band.">
+<meta property="og:title" content="How Scoring Works — Strokes Gained & Par Scoring | The Practice App">
+<meta property="og:description" content="How The Practice App scores golf practice: Strokes Gained from 30 handicap to PGA Tour, plus Eagle to Double par scoring with bands for every ability level.">
 <meta property="og:url" content="https://thepracticeapp.co.uk/scoring.html">
 <meta property="og:site_name" content="The Practice App">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="How Scoring Works — Strokes Gained & Par-Style Scoring | The Practice App">
-<meta name="twitter:description" content="How The Practice App scores your golf practice: strokes-gained baselines from 30-handicap to PGA Tour, plus Eagle/Birdie/Par/Bogey/Double scoring, with the real proximity data behind every band.">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="styles.css">
+<meta property="og:image" content="https://thepracticeapp.co.uk/images/photo-range-distance-control.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How Scoring Works — Strokes Gained & Par Scoring | The Practice App">
+<meta name="twitter:description" content="How The Practice App scores golf practice: Strokes Gained from 30 handicap to PGA Tour, plus Eagle to Double par scoring with bands for every ability level.">
+<meta name="twitter:image" content="https://thepracticeapp.co.uk/images/photo-range-distance-control.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="site.css">
 </head><body data-page="scoring">
-<!-- ============ NAV ============ -->
-<nav class="nav">
-  <div class="nav-inner">
-    <a href="index.html" class="brand"><img src="images/logo.jpg" alt=""/> THE PRACTICE APP</a>
-    <div class="nav-cta">
-      <a href="index.html#login" class="navbtn">Log In</a>
-      <a href="#waitlist" class="navbtn solid">Get Notified</a>
-    </div>
-  </div>
-</nav>
-<div class="tabbar-wrap">
-  <button class="tabbar-toggle" id="tabbarToggle" type="button" aria-expanded="false" aria-controls="tabbar">
-    <span id="tabbarToggleLabel">Menu</span>
-    <svg class="tabbar-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-  </button>
-  <div class="tabbar" id="tabbar">
-    <a href="index.html" class="tab-pill" data-tab="home">Home</a>
-    <a href="index.html#features" class="tab-pill" data-tab="features">Features</a>
-    <a href="scoring.html" class="tab-pill" data-tab="scoring">Scoring</a>
-    <a href="why-practice.html" class="tab-pill" data-tab="why">Why Practice</a>
-    <a href="pricing.html" class="tab-pill" data-tab="pricing">Pricing</a>
-    <a href="coaches.html" class="tab-pill" data-tab="coaches">Coaches</a>
-    <a href="faq.html" class="tab-pill" data-tab="faq">FAQ</a>
-    <a href="contact.html" class="tab-pill" data-tab="contact">Contact</a>
-  </div>
-</div>
-<!-- ============ SCORING SYSTEM ============ -->
-<section class="section" id="scoring">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-range" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+    <symbol id="i-yard" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="8" x2="3" y2="16"/><line x1="8" y1="9" x2="8" y2="15"/><line x1="13" y1="9" x2="13" y2="15"/><line x1="18" y1="8" x2="18" y2="16"/><line x1="21" y1="8" x2="21" y2="16"/></symbol>
+    <symbol id="i-short" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 L17 5"/><path d="M17 5 L21 3 L19 7 Z" fill="currentColor" stroke="none"/><circle cx="6" cy="19" r="1.4" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-putt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="3" x2="12" y2="21"/><path d="M12 3 L19 6 L12 9 Z" fill="currentColor" stroke="none"/><ellipse cx="12" cy="21" rx="7" ry="1.6"/></symbol>
+    <symbol id="i-compete" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18 L9 21 L15 21 L15 18"/><path d="M6 4 L18 4 L18 10 A6 6 0 0 1 6 10 Z"/><path d="M6 6 L3 6 L3 8 A3 3 0 0 0 6 11"/><path d="M18 6 L21 6 L21 8 A3 3 0 0 1 18 11"/></symbol>
+    <symbol id="i-analysis" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19 L4 13"/><path d="M10 19 L10 8"/><path d="M16 19 L16 4"/></symbol>
+    <symbol id="i-matrix" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+    <symbol id="i-course" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><path d="M8 16 L10 18 L16 15"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7 L12 12 L16 14"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 L10 17 L19 7"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7 L12 13 L21 7"/></symbol>
+    <symbol id="i-people" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20 a6.5 6.5 0 0 1 13 0"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14.2 a5 5 0 0 1 5.5 5.8"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5 H20 V16 H9 L5 20 V16 H4 Z"/></symbol>
+    <symbol id="i-shuffle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7 H7 L15 17 H21"/><path d="M3 17 H7 L9.5 14"/><path d="M13 10 L15 7 H21"/><path d="M18 4 L21 7 L18 10"/><path d="M18 14 L21 17 L18 20"/></symbol>
+  </defs>
+</svg>
+
+<nav>
   <div class="wrap">
-    <div class="eyebrow">How scoring works</div>
-    <h1 class="h2">Strokes gained &mdash; and now, Par-style scoring too</h1>
-    <p class="lede" style="margin-top:14px;">Every drill already scores in strokes gained. Distance Control and Short Game now also score Eagle, Birdie, Par, Bogey and Double &mdash; the same language as a real round of golf.</p>
+    <a class="brand" href="index.html"><img src="images/logo.jpg" alt="">THE PRACTICE APP</a>
+    <div class="navlinks"><a href="scoring.html" aria-current="page">Scoring</a><a href="why-practice.html">Why practice</a><a href="coaches.html">Coaches</a><a href="pricing.html">Pricing</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div>
+    <a class="btn btn-primary" href="#join">Join the waitlist</a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button>
+  </div>
+  <div class="wrap mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="scoring.html" aria-current="page">Scoring</a><a href="why-practice.html">Why practice</a><a href="coaches.html">Coaches</a><a href="pricing.html">Pricing</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div>
+</nav>
 
-    <div class="grid g2" style="margin-top:36px;">
-      <div class="card">
-        <h3 style="font-family:'Bebas Neue',sans-serif;font-size:20px;color:var(--sand);margin-bottom:8px;">Strokes gained</h3>
-        <p style="font-family:'Inter',sans-serif;font-size:14px;color:var(--cream-dim);line-height:1.6;margin:0;">Every shot is compared to a fixed baseline &mdash; from 30-handicap to PGA Tour &mdash; so a putt, a wedge shot and a drive can all be measured on the same scale. This is what every trend chart and Analysis tab in the app is built on.</p>
-      </div>
-      <div class="card">
-        <h3 style="font-family:'Bebas Neue',sans-serif;font-size:20px;color:var(--sand);margin-bottom:8px;">Par-style scoring</h3>
-        <p style="font-family:'Inter',sans-serif;font-size:14px;color:var(--cream-dim);line-height:1.6;margin:0;">Each shot is scored Eagle, Birdie, Par, Bogey or Double based on how close it finishes &mdash; to your target on the range, to the hole in the short game &mdash; and rolls up into a running &ldquo;round to par,&rdquo; just like a real card.</p>
-      </div>
-    </div>
+<header class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">How scoring works</span>
+    <h1>Scored like a round. <span class="g">Fair at every level.</span></h1>
+    <p class="lead">Two scores on every session. Strokes Gained tells you where you win and lose shots. Par scoring makes it feel like golf.</p>
+  </div>
+</header>
 
-    <div style="margin-top:56px;">
-      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:26px;color:var(--cream);margin-bottom:10px;">Where the numbers come from</h3>
-      <p class="lede">The bands are not guesses &mdash; here is how each one was built.</p>
-
-      <div class="grid g3" style="margin-top:28px;">
-        <div class="feature-card">
-          <h3 style="font-size:17px;">Scaled by ability</h3>
-          <p>All 8 baseline tiers &mdash; Tour, Scratch, and 5 through 30 handicap &mdash; have their own bands, so &ldquo;Par&rdquo; means a realistic result at your level, not a tour pro&rsquo;s.</p>
-        </div>
-        <div class="feature-card">
-          <h3 style="font-size:17px;">Lie-specific for Short Game</h3>
-          <p>Fairway, rough and bunker each get their own thresholds at every tier &mdash; bunker is consistently the hardest lie in every proximity dataset checked, so one universal band would score it unfairly.</p>
-        </div>
-        <div class="feature-card">
-          <h3 style="font-size:17px;">Built from real proximity data</h3>
-          <p>Short Game&rsquo;s bands synthesize figures from MyGolfSpy, Shot Scope, World Of Short Game, The Left Rough and Arccos &mdash; real measured proximity-to-hole, not invented numbers.</p>
-        </div>
-      </div>
-    </div>
-
-    <div style="margin-top:56px;">
-      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--cream);margin-bottom:6px;">Distance Control &mdash; miss %, by tier</h3>
-      <p class="lede" style="margin-bottom:20px;">Miss as % of target distance (3 of 8 tiers shown):</p>
-      <div style="overflow-x:auto;">
-        <table style="width:100%;border-collapse:collapse;font-family:'JetBrains Mono',monospace;font-size:12.5px;min-width:560px;">
-          <thead>
-            <tr style="border-bottom:1px solid var(--border);">
-              <th style="text-align:left;padding:10px 12px;color:var(--sand);">TIER</th>
-              <th style="text-align:center;padding:10px 12px;color:var(--fairway-light);">EAGLE &le;</th>
-              <th style="text-align:center;padding:10px 12px;color:var(--cream);">BIRDIE &le;</th>
-              <th style="text-align:center;padding:10px 12px;color:var(--cream-dim);">PAR &le;</th>
-              <th style="text-align:center;padding:10px 12px;color:var(--flag);">BOGEY &le;</th>
-              <th style="text-align:center;padding:10px 12px;color:var(--flag);">DOUBLE</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="border-bottom:1px solid var(--border);"><td style="padding:10px 12px;color:var(--cream);">Tour</td><td style="text-align:center;padding:10px 12px;color:var(--cream-dim);">1%</td><td style="text-align:center;padding:10px 12px;color:var(--cream-dim);">3%</td><td style="text-align:center;padding:10px 12px;color:var(--cream-dim);">5%</td><td style="text-align:center;padding:10px 12px;color:var(--cream-dim);">7%</td><td style="text-align:center;padding:10px 12px;color:var(--cream-dim);">&gt;7%</td></tr>
-            <tr style="border-bottom:1px solid var(--border);"><td style="padding:10px 12px;color:var(--cream);">Scratch</td><td style="text-align:center;padding:10px 12px;color:var(--cream-dim);">3%</td><td style="text-align:center;padding:10px 12px;color:var(--cream-dim);">5%</td><td style="text-align:center;padding:10px 12px;color:var(--cream-dim);">7%</td><td style="text-align:center;padding:10px 12px;color:var(--cream-dim);">10%</td><td style="text-align:center;padding:10px 12px;color:var(--cream-dim);">&gt;10%</td></tr>
-            <tr><td style="padding:10px 12px;color:var(--cream);">10 Handicap</td><td style="text-align:center;padding:10px 12px;color:var(--cream-dim);">7%</td><td style="text-align:center;padding:10px 12px;color:var(--cream-dim);">9%</td><td style="text-align:center;padding:10px 12px;color:var(--cream-dim);">11%</td><td style="text-align:center;padding:10px 12px;color:var(--cream-dim);">16%</td><td style="text-align:center;padding:10px 12px;color:var(--cream-dim);">&gt;16%</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div style="margin-top:44px;">
-      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--cream);margin-bottom:6px;">Short Game &mdash; proximity to hole, by lie (10 Handicap)</h3>
-      <p class="lede" style="margin-bottom:20px;">Proximity to hole as % of shot distance, by lie (10 Handicap tier shown):</p>
-      <div style="overflow-x:auto;">
-        <table style="width:100%;border-collapse:collapse;font-family:'JetBrains Mono',monospace;font-size:12.5px;min-width:560px;">
-          <thead>
-            <tr style="border-bottom:1px solid var(--border);">
-              <th style="text-align:left;padding:10px 12px;color:var(--sand);">LIE</th>
-              <th style="text-align:center;padding:10px 12px;color:var(--fairway-light);">EAGLE &le;</th>
-              <th style="text-align:center;padding:10px 12px;color:var(--cream);">BIRDIE &le;</th>
-              <th style="text-align:center;padding:10px 12px;color:var(--cream-dim);">PAR &le;</th>
-              <th style="text-align:center;padding:10px 12px;color:var(--flag);">BOGEY &le;</th>
-              <th style="text-align:center;padding:10px 12px;color:var(--flag);">DOUBLE</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="border-bottom:1px solid var(--border);"><td style="padding:10px 12px;color:var(--cream);">Fairway</td><td style="text-align:center;padding:10px 12px;color:var(--cream-dim);">7%</td><td style="text-align:center;padding:10px 12px;color:var(--cream-dim);">12%</td><td style="text-align:center;padding:10px 12px;color:var(--cream-dim);">17%</td><td style="text-align:center;padding:10px 12px;color:var(--cream-dim);">24%</td><td style="text-align:center;padding:10px 12px;color:var(--cream-dim);">&gt;24%</td></tr>
-            <tr style="border-bottom:1px solid var(--border);"><td style="padding:10px 12px;color:var(--cream);">Rough</td><td style="text-align:center;padding:10px 12px;color:var(--cream-dim);">8%</td><td style="text-align:center;padding:10px 12px;color:var(--cream-dim);">14%</td><td style="text-align:center;padding:10px 12px;color:var(--cream-dim);">20%</td><td style="text-align:center;padding:10px 12px;color:var(--cream-dim);">28%</td><td style="text-align:center;padding:10px 12px;color:var(--cream-dim);">&gt;28%</td></tr>
-            <tr><td style="padding:10px 12px;color:var(--cream);">Bunker</td><td style="text-align:center;padding:10px 12px;color:var(--cream-dim);">10%</td><td style="text-align:center;padding:10px 12px;color:var(--cream-dim);">17%</td><td style="text-align:center;padding:10px 12px;color:var(--cream-dim);">24%</td><td style="text-align:center;padding:10px 12px;color:var(--cream-dim);">34%</td><td style="text-align:center;padding:10px 12px;color:var(--cream-dim);">&gt;34%</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="hero-note" style="margin-top:16px;">Sources: <a href="https://mygolfspy.com/news-opinion/instruction/how-good-is-your-short-game-performance-chart-by-handicap/" target="_blank" rel="noopener" style="color:var(--sand);text-decoration:underline;">MyGolfSpy</a>, <a href="https://shotscope.com/blog/practice-green/stats-and-data/approach-shots-average-proximity/" target="_blank" rel="noopener" style="color:var(--sand);text-decoration:underline;">Shot Scope</a>, <a href="https://www.worldofshortgame.com/en/short-game-stats/" target="_blank" rel="noopener" style="color:var(--sand);text-decoration:underline;">World Of Short Game</a>, <a href="https://theleftrough.com/golf-statistics-by-handicap/" target="_blank" rel="noopener" style="color:var(--sand);text-decoration:underline;">The Left Rough</a> and <a href="https://www.arccosgolf.com/blogs/community/short-game-data-stats" target="_blank" rel="noopener" style="color:var(--sand);text-decoration:underline;">Arccos</a> &mdash; a reasoned starting point from real data, refined further as more sessions get logged.</p>
-    </div>
+<section style="padding-top:0">
+  <div class="wrap cards2">
+    <article class="card"><span class="chip"><svg><use href="#i-analysis"/></svg></span><h3>Strokes Gained</h3><p>Every shot measured against a fixed baseline, so a putt, a chip and a drive sit on the same scale. It powers every trend in the app.</p></article>
+    <article class="card"><span class="chip"><svg><use href="#i-range"/></svg></span><h3>Par scoring</h3><p>Finish close and it's a birdie. Miss by a mile and it's a double. Every shot rolls into a running score to par, just like a card.</p></article>
   </div>
 </section>
 
-<!-- ============ WAITLIST / FOOTER CTA ============ -->
-<section class="section-tight" id="waitlist" style="background:var(--turf);border-top:1px solid var(--border);">
-  <div class="wrap" style="text-align:center;">
-    <h2 class="h2">Be first to know when it's live</h2>
-    <p class="lede" style="margin:14px auto 26px;">No spam — one email when The Practice App hits the App Store, plus your early-access discount code.</p>
-    <form style="max-width:440px;margin:0 auto;display:flex;gap:10px;flex-wrap:wrap;justify-content:center;" name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field-2" onsubmit="handleWaitlist(event)">
-      <input type="hidden" name="form-name" value="waitlist"/>
-      <p style="position:absolute;left:-9999px;" aria-hidden="true"><label>Don't fill this out: <input name="bot-field-2"/></label></p>
-      <input type="email" name="email" required placeholder="you@example.com" style="flex:1;min-width:220px;background:var(--turf-dark);border:1px solid var(--border);border-radius:8px;color:var(--cream);font-family:'Inter',sans-serif;font-size:14px;padding:13px 14px;"/>
-      <button class="btn btn-primary" type="submit">Notify Me</button>
-    </form>
+<section class="divider">
+  <div class="wrap" style="display:flex;flex-direction:column;gap:22px">
+    <div class="sec-head" style="margin-bottom:0">
+      <span class="eyebrow">Distance control</span>
+      <h2>Par means par for you.</h2>
+      <p class="lead">Your miss as a % of the target. Pick a level to see its bands.</p>
+    </div>
+    <div class="seg tiers" id="tierSeg" role="tablist" aria-label="Ability level"><button role="tab" type="button" data-k="tour" aria-selected="false">PGA Tour</button><button role="tab" type="button" data-k="scratch" aria-selected="false">Scratch</button><button role="tab" type="button" data-k="5" aria-selected="false">5</button><button role="tab" type="button" data-k="10" aria-selected="true">10</button><button role="tab" type="button" data-k="15" aria-selected="false">15</button><button role="tab" type="button" data-k="20" aria-selected="false">20</button><button role="tab" type="button" data-k="25" aria-selected="false">25</button><button role="tab" type="button" data-k="30" aria-selected="false">30</button></div>
+    <div class="tbl-wrap"><table class="bands-t"><thead><tr><th>LEVEL</th><th>EAGLE</th><th>BIRDIE</th><th>PAR</th><th>BOGEY</th><th>DOUBLE</th></tr></thead><tbody id="tierBody" data-tiers='{"tour": ["PGA Tour", 1, 3, 5, 7], "scratch": ["Scratch", 3, 5, 7, 10], "5": ["5 hcp", 5, 7, 9, 13], "10": ["10 hcp", 7, 9, 11, 16], "15": ["15 hcp", 9, 11, 13, 19], "20": ["20 hcp", 11, 13, 15, 22], "25": ["25 hcp", 13, 15, 17, 25], "30": ["30 hcp", 15, 17, 19, 28]}'><tr><td>10 hcp</td><td class="e">≤ 7%</td><td class="b">≤ 9%</td><td>≤ 11%</td><td class="bo">≤ 16%</td><td class="d">&gt; 16%</td></tr></tbody></table></div>
+  </div>
+</section>
+
+<section class="divider">
+  <div class="wrap split">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <span class="eyebrow">Short game</span>
+      <h2>A bunker isn't a fairway.</h2>
+      <p class="lead">Each lie gets its own standard, measured as proximity to the hole as a % of shot distance. Holed it? Always an eagle.</p>
+      <p class="sources">10 handicap shown. Built from real proximity data from MyGolfSpy, Shot Scope, World Of Short Game, The Left Rough and Arccos.</p>
+    </div>
+    <div class="tbl-wrap"><table class="bands-t"><thead><tr><th>LIE</th><th>EAGLE</th><th>BIRDIE</th><th>PAR</th><th>BOGEY</th><th>DOUBLE</th></tr></thead><tbody><tr><td>Fairway</td><td class="e">≤ 7%</td><td class="b">≤ 12%</td><td>≤ 17%</td><td class="bo">≤ 24%</td><td class="d">&gt; 24%</td></tr><tr><td>Rough</td><td class="e">≤ 8%</td><td class="b">≤ 14%</td><td>≤ 20%</td><td class="bo">≤ 28%</td><td class="d">&gt; 28%</td></tr><tr><td>Bunker</td><td class="e">≤ 10%</td><td class="b">≤ 17%</td><td>≤ 24%</td><td class="bo">≤ 34%</td><td class="d">&gt; 34%</td></tr></tbody></table></div>
+  </div>
+</section>
+
+<section class="cta" id="join">
+  <div class="wrap">
+    <div class="cta-box">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <span class="eyebrow">Launching soon</span>
+        <h2>Your next range session could have a score.</h2>
+      </div>
+      <div>
+        <form id="waitlist" name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field-2">
+          <input type="hidden" name="form-name" value="waitlist">
+          <p class="hp"><label>Leave blank <input name="bot-field-2"></label></p>
+          <input id="email" name="email" type="email" required placeholder="you@email.com" aria-label="Email address">
+          <button class="btn btn-primary" type="submit">Join the waitlist</button>
+        </form>
+        <p class="formnote" id="formnote">Early members get launch pricing locked in.</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <footer>
-  <div class="wrap footer-inner">
-    <a href="index.html" class="brand"><img src="images/logo.jpg" alt="" style="width:20px;height:20px;"/> THE PRACTICE APP</a>
-    <div class="footer-links">
-      <a href="index.html#features">Features</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="coaches.html">Coaches</a>
-      <a href="faq.html">FAQ</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <div class="footer-note">© 2026 The Practice App. Screenshots shown are from the live product build.</div>
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="images/logo.jpg" alt="">THE PRACTICE APP</a>
+    <a href="mailto:info@thepracticeapp.co.uk">info@thepracticeapp.co.uk</a>
+    <div class="links"><a href="scoring.html">Scoring</a><a href="why-practice.html">Why practice</a><a href="coaches.html">Coaches</a><a href="pricing.html">Pricing</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div>
   </div>
 </footer>
-<div id="toast"></div>
-
-<div id="lightbox" onclick="closeLightbox()">
-  <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Close">&times;</button>
-  <img id="lightbox-img" src="" alt=""/>
-</div>
-
-<script src="script.js"></script>
+<script src="site.js"></script>
 </body></html>

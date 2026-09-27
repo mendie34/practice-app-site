@@ -1,340 +1,315 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>The Practice App — Structured Golf Practice, Strokes-Gained Scoring</title>
-<meta name="description" content="The Practice App is a structured golf practice app for the range, short game and putting green — strokes-gained scoring, 5 putting drills, wedge yardage charts and coach connection.">
+<title>The Practice App — Golf Practice, Scored Like a Round</title>
+<meta name="description" content="Make every range session count. The Practice App scores your golf practice like a round, shows where you lose shots with Strokes Gained, and lets you compare with friends.">
 <link rel="canonical" href="https://thepracticeapp.co.uk/">
+<meta name="theme-color" content="#1C1C1A">
+<link rel="icon" href="images/logo.jpg">
 <meta property="og:type" content="website">
-<meta property="og:title" content="The Practice App — Structured Golf Practice, Strokes-Gained Scoring">
-<meta property="og:description" content="The Practice App is a structured golf practice app for the range, short game and putting green — strokes-gained scoring, 5 putting drills, wedge yardage charts and coach connection.">
+<meta property="og:title" content="The Practice App — Golf Practice, Scored Like a Round">
+<meta property="og:description" content="Make every range session count. The Practice App scores your golf practice like a round, shows where you lose shots with Strokes Gained, and lets you compare with friends.">
 <meta property="og:url" content="https://thepracticeapp.co.uk/">
 <meta property="og:site_name" content="The Practice App">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="The Practice App — Structured Golf Practice, Strokes-Gained Scoring">
-<meta name="twitter:description" content="The Practice App is a structured golf practice app for the range, short game and putting green — strokes-gained scoring, 5 putting drills, wedge yardage charts and coach connection.">
+<meta property="og:image" content="https://thepracticeapp.co.uk/images/photo-range-distance-control.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Practice App — Golf Practice, Scored Like a Round">
+<meta name="twitter:description" content="Make every range session count. The Practice App scores your golf practice like a round, shows where you lose shots with Strokes Gained, and lets you compare with friends.">
+<meta name="twitter:image" content="https://thepracticeapp.co.uk/images/photo-range-distance-control.jpg">
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "The Practice App",
-  "applicationCategory": "SportsApplication",
-  "operatingSystem": "iOS, Web",
-  "url": "https://thepracticeapp.co.uk/",
-  "description": "Structured golf practice app for the range, short game and putting green, with strokes-gained scoring, 5 putting drills, a wedge yardage builder and coach connection.",
-  "offers": [
-    { "@type": "Offer", "price": "4.99", "priceCurrency": "GBP", "name": "Monthly" },
-    { "@type": "Offer", "price": "39", "priceCurrency": "GBP", "name": "Annual" }
-  ]
-}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"The Practice App","applicationCategory":"SportsApplication","operatingSystem":"iOS, Web","url":"https://thepracticeapp.co.uk/","description":"Golf practice app that scores every range, short game and putting session like a round, with Strokes Gained analysis, yardage gapping, a wedge matrix, head-to-head games and friend comparisons.","offers":[{"@type":"Offer","price":"4.99","priceCurrency":"GBP","name":"Monthly"},{"@type":"Offer","price":"39","priceCurrency":"GBP","name":"Annual"}]}
 </script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="site.css">
 </head><body data-page="home">
-<!-- ============ NAV ============ -->
-<nav class="nav">
-  <div class="nav-inner">
-    <a href="index.html" class="brand"><img src="images/logo.jpg" alt=""/> THE PRACTICE APP</a>
-    <div class="nav-cta">
-      <a href="#login" class="navbtn">Log In</a>
-      <a href="#waitlist" class="navbtn solid">Get Notified</a>
-    </div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-range" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+    <symbol id="i-yard" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="8" x2="3" y2="16"/><line x1="8" y1="9" x2="8" y2="15"/><line x1="13" y1="9" x2="13" y2="15"/><line x1="18" y1="8" x2="18" y2="16"/><line x1="21" y1="8" x2="21" y2="16"/></symbol>
+    <symbol id="i-short" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 L17 5"/><path d="M17 5 L21 3 L19 7 Z" fill="currentColor" stroke="none"/><circle cx="6" cy="19" r="1.4" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-putt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="3" x2="12" y2="21"/><path d="M12 3 L19 6 L12 9 Z" fill="currentColor" stroke="none"/><ellipse cx="12" cy="21" rx="7" ry="1.6"/></symbol>
+    <symbol id="i-compete" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18 L9 21 L15 21 L15 18"/><path d="M6 4 L18 4 L18 10 A6 6 0 0 1 6 10 Z"/><path d="M6 6 L3 6 L3 8 A3 3 0 0 0 6 11"/><path d="M18 6 L21 6 L21 8 A3 3 0 0 1 18 11"/></symbol>
+    <symbol id="i-analysis" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19 L4 13"/><path d="M10 19 L10 8"/><path d="M16 19 L16 4"/></symbol>
+    <symbol id="i-matrix" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+    <symbol id="i-course" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><path d="M8 16 L10 18 L16 15"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7 L12 12 L16 14"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 L10 17 L19 7"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7 L12 13 L21 7"/></symbol>
+    <symbol id="i-people" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20 a6.5 6.5 0 0 1 13 0"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14.2 a5 5 0 0 1 5.5 5.8"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5 H20 V16 H9 L5 20 V16 H4 Z"/></symbol>
+    <symbol id="i-shuffle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7 H7 L15 17 H21"/><path d="M3 17 H7 L9.5 14"/><path d="M13 10 L15 7 H21"/><path d="M18 4 L21 7 L18 10"/><path d="M18 14 L21 17 L18 20"/></symbol>
+  </defs>
+</svg>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="images/logo.jpg" alt="">THE PRACTICE APP</a>
+    <div class="navlinks"><a href="scoring.html">Scoring</a><a href="why-practice.html">Why practice</a><a href="coaches.html">Coaches</a><a href="pricing.html">Pricing</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div>
+    <a class="btn btn-primary" href="#join">Join the waitlist</a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button>
   </div>
+  <div class="wrap mobile-menu" id="mobileMenu"><a href="index.html" aria-current="page">Home</a><a href="scoring.html">Scoring</a><a href="why-practice.html">Why practice</a><a href="coaches.html">Coaches</a><a href="pricing.html">Pricing</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div>
 </nav>
-<div class="tabbar-wrap">
-  <button class="tabbar-toggle" id="tabbarToggle" type="button" aria-expanded="false" aria-controls="tabbar">
-    <span id="tabbarToggleLabel">Menu</span>
-    <svg class="tabbar-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-  </button>
-  <div class="tabbar" id="tabbar">
-    <a href="index.html" class="tab-pill" data-tab="home">Home</a>
-    <a href="index.html#features" class="tab-pill" data-tab="features">Features</a>
-    <a href="scoring.html" class="tab-pill" data-tab="scoring">Scoring</a>
-    <a href="why-practice.html" class="tab-pill" data-tab="why">Why Practice</a>
-    <a href="pricing.html" class="tab-pill" data-tab="pricing">Pricing</a>
-    <a href="coaches.html" class="tab-pill" data-tab="coaches">Coaches</a>
-    <a href="faq.html" class="tab-pill" data-tab="faq">FAQ</a>
-    <a href="contact.html" class="tab-pill" data-tab="contact">Contact</a>
-  </div>
-</div>
-<!-- ============ HERO ============ -->
-<header class="hero">
-  <div class="wrap hero-inner">
-    <div>
-      <div class="eyebrow">Golf practice, done properly</div>
-      <h1>Stop practicing golf without intent.<br/>Start <span class="accent">improving — quickly.</span></h1>
-      <p class="lede">Structured, measurable practice for the range, short game and putting green — scored the way the pros measure it: strokes gained.</p>
+
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="eyebrow">Golf practice, scored</span>
+      <h1>Make every range session <span class="g">count.</span></h1>
+      <p class="lead">Every drill scored like a round. See which shots cost you, and prove you're getting better.</p>
       <div class="hero-ctas">
-        <a href="#waitlist" class="btn btn-primary">Get Early Access</a>
-        <a href="#features" class="btn btn-outline">See What's Inside</a>
+        <a class="btn btn-primary" href="#join">Get early access</a>
       </div>
-      <div class="hero-note">Free to join the waitlist · No credit card required</div>
-      <div class="badge-row">
-        <span class="badge">Strokes-gained scoring</span>
-        <span class="badge">5 putting drills</span>
-        <span class="badge">Wedge Matrix yardages</span>
-        <span class="badge">Head-to-head Compete mode</span>
-      </div>
+      <div class="hero-meta"><span>iPhone + web</span><span>Built on Strokes Gained</span><span>Launching soon</span></div>
     </div>
-    <div>
-      <div class="phone-frame">
-        <img class="shot-img" src="images/hero-home-screen.jpg" alt="The Practice App home screen" onclick="openLightbox(this.src,this.alt)"/>
-        <div class="zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+
+    <div class="phone" aria-label="The Practice App home screen">
+      <div class="screen">
+        <div class="statusbar"><span>9:41</span><span>●●● 100%</span></div>
+        <div class="appbar"><img src="images/logo.jpg" alt=""><b>THE PRACTICE APP</b><span class="pb">PLAYER</span></div>
+        <div class="eyebrow" style="font-family:var(--sys);letter-spacing:.1em;font-size:10px">WELCOME BACK</div>
+        <div style="font-size:22px;margin:2px 0 14px">Pick a session</div>
+        <div class="tiles">
+          <div class="tile"><div class="chip"><svg><use href="#i-range"/></svg></div><div><b>THE RANGE</b><small>Distance control &amp; tee accuracy</small></div></div>
+          <div class="tile"><div class="chip"><svg><use href="#i-yard"/></svg></div><div><b>YARDAGES</b><small>Gapping &amp; Wedge Matrix</small></div></div>
+          <div class="tile"><div class="chip"><svg><use href="#i-short"/></svg></div><div><b>SHORT GAME</b><small>Chipping &amp; pitching</small></div></div>
+          <div class="tile"><div class="chip"><svg><use href="#i-putt"/></svg></div><div><b>PUTTING</b><small>5 drills + on-course</small></div></div>
+          <div class="tile"><div class="chip"><svg><use href="#i-compete"/></svg></div><div><b>COMPETE</b><small>Head-to-head</small></div></div>
+          <div class="tile"><div class="chip"><svg><use href="#i-analysis"/></svg></div><div><b>ANALYSIS</b><small>Track your progress</small></div></div>
+        </div>
       </div>
-      <div class="phone-caption">Live from the app — pick a session, get to work</div>
     </div>
   </div>
 </header>
 
-<!-- ============ FEATURES / WHY USE ============ -->
-<section class="section" id="features">
-  <div class="wrap">
-    <div class="eyebrow">Why use this app</div>
-    <h2 class="h2">Everything a serious golf practice session needs</h2>
-    <p class="lede" style="margin-top:14px;">Every shot — range, short game, or putting green — gets logged, scored and turned into insight. No more scorecard scribbles.</p>
+<div class="problem">
+  <div class="wrap"><div class="pgrid">
+    <div class="cell"><span class="eyebrow">A normal practice session</span><div class="big">Repetitive</div><p>Fifty balls, block practice, no idea if today was better than last week.</p></div>
+    <div class="cell"><span class="eyebrow">The Practice App</span><div class="big">Competitive</div><p>Every shot has a target and a result. Every session has a number.</p></div>
+    <div class="cell"><span class="eyebrow">Track progress</span><div class="big">Measurable</div><p>Trends that show exactly which part of your game is improving, or needs work.</p></div>
+  </div></div>
+</div>
 
-    <div class="grid g3" style="margin-top:44px;">
-      <div class="feature-card">
-        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg></div>
-        <h3>Distance Control</h3>
-        <p>Random targets, real carry distances, instant strokes-gained — or self-rate 1–5 with no launch monitor.</p>
+<section class="photos" aria-label="The app in use">
+  <div class="wrap">
+    <div class="photo-row">
+      <figure><img src="images/photo-range-distance-control.jpg" loading="lazy" alt="Golfer on the range checking a Distance Control target on the app"><figcaption><svg><use href="#i-range"/></svg>On the range</figcaption></figure>
+      <figure><img src="images/photo-short-game.jpg" loading="lazy" alt="Player logging a chip shot beside the green"><figcaption><svg><use href="#i-short"/></svg>Around the green</figcaption></figure>
+      <figure><img src="images/photo-around-the-clock.jpg" loading="lazy" alt="Around the Clock putting drill with balls circling the hole"><figcaption><svg><use href="#i-putt"/></svg>On the putting green</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Why golfers sign up</span>
+      <h2>Less guessing. More shots saved.</h2>
+    </div>
+    <div class="benefits">
+      <article class="benefit">
+        <div class="chip"><svg><use href="#i-yard"/></svg></div>
+        <h3>Never be between clubs again</h3>
+        <p>Know your real carry for every club and every wedge swing, not the number you hope for.</p>
+        <span class="tag">GAPPING · WEDGE MATRIX</span>
+      </article>
+      <article class="benefit">
+        <div class="chip"><svg><use href="#i-range"/></svg></div>
+        <h3>Practice that feels like a round</h3>
+        <p>Random targets, a score to par, and pressure on every swing. The habits carry to the course.</p>
+        <span class="tag">DISTANCE CONTROL · TEE ACCURACY</span>
+      </article>
+      <article class="benefit">
+        <div class="chip"><svg><use href="#i-analysis"/></svg></div>
+        <h3>Know what to practise next</h3>
+        <p>Strokes Gained shows where you lose shots, so you stop grinding what's already good.</p>
+        <span class="tag">ANALYSIS · COACH SUMMARY</span>
+      </article>
+      <article class="benefit">
+        <div class="chip"><svg><use href="#i-short"/></svg></div>
+        <h3>Get up and down more</h3>
+        <p>Chips scored by lie. Fairway, rough and bunker each held to a fair standard.</p>
+        <span class="tag">SHORT GAME</span>
+      </article>
+      <article class="benefit">
+        <div class="chip"><svg><use href="#i-putt"/></svg></div>
+        <h3>Stop three-putting</h3>
+        <p>Five drills for start line, pace and pressure, plus real putt tracking on the course.</p>
+        <span class="tag">5 DRILLS + ON-COURSE</span>
+      </article>
+      <article class="benefit">
+        <div class="chip"><svg><use href="#i-compete"/></svg></div>
+        <h3>Beat your mates, not the bucket</h3>
+        <p>Head-to-head games for 2 to 4 players, and friends to compare stats with.</p>
+        <span class="tag">COMPETE · FRIENDS</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="try divider" id="try">
+  <div class="wrap">
+    <div class="try-copy">
+      <span class="eyebrow">Try it</span>
+      <h2>Your practice, scored to par.</h2>
+      <p class="lead">Treat your practice like a round. Hit it close and you make birdie. Too far away and you'll be making bogey.</p>
+      <p class="small">Every ability level has its own thresholds, from PGA Tour to 30 handicap. Here's the Tour standard. <a href="scoring.html" style="color:var(--green-lt)">See every level</a></p>
+      <div class="bands" aria-label="PGA Tour scoring bands">
+        <div class="bh"><span>PGA TOUR</span><span>MISS, % OF TARGET</span></div>
+        <div><span class="g">EAGLE</span><span>within 1%</span></div>
+        <div><span class="g">BIRDIE</span><span>within 3%</span></div>
+        <div><span>PAR</span><span>within 5%</span></div>
+        <div><span style="color:var(--flag)">BOGEY</span><span>within 7%</span></div>
+        <div><span style="color:var(--flag)">DOUBLE</span><span>over 7%</span></div>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 2v20M7 2 3 22M17 2l4 20"/></svg></div>
-        <h3>Tee Accuracy</h3>
-        <p>Set your fairway width and track hit-or-miss by club, so you know exactly what's costing you fairways.</p>
+    </div>
+
+    <div class="sim" aria-live="polite">
+      <div class="sim-top">
+        <div>
+          <span class="eyebrow">Distance control · PGA Tour · target</span>
+          <div class="target" id="target">142<small>YDS</small></div>
+        </div>
+        <div class="chip"><svg><use href="#i-range"/></svg></div>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="2"/><path d="M3.5 9h17M3.5 15h17M9 3.5v17M15 3.5v17"/></svg></div>
-        <h3>Wedge Matrix</h3>
-        <p>Build your own yardage chart across every wedge and swing length, with outlier-trimmed averages.</p>
+      <div class="stats">
+        <div class="stat"><span class="eyebrow">Previous shot</span><div class="v" id="prev">—</div></div>
+        <div class="stat"><span class="eyebrow">Round to par</span><div class="v" id="total">E</div></div>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 21V4"/><path d="M6 4l12 4.5L6 13"/></svg></div>
-        <h3>Short Game</h3>
-        <p>Lie, distance window and result-from-hole, with a one-tap "holed it" shortcut for the shots that matter.</p>
+      <div class="range-row">
+        <label for="carry">Your carry <output id="carryOut">140 yds</output></label>
+        <input type="range" id="carry" min="100" max="190" value="140">
       </div>
-      <div class="feature-card">
-        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/><path d="M12 3v3M21 12h-3M12 21v-3M3 12h3"/></svg></div>
-        <h3>5 Putting Drills</h3>
-        <p>Random Practice, Around the Clock, Start Line, Pace Control and full on-course tracking.</p>
+      <button class="btn btn-primary" id="hit" type="button" style="justify-content:center">Log shot</button>
+      <div class="log" id="log" aria-label="Shots this round"></div>
+    </div>
+  </div>
+</section>
+
+<section class="divider">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">How it works</span>
+      <h2>Thirty seconds to set up. One tap per shot.</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="n">01</span><h3>Pick a drill</h3><p>Range, wedges, short game or putting. Choose 9, 18 or 27 holes.</p></div>
+      <div class="step"><span class="n">02</span><h3>Play your shot, then tap</h3><p>Log the result between shots. The keypad stays open.</p></div>
+      <div class="step"><span class="n">03</span><h3>See the trend</h3><p>Your score, your Strokes Gained and your weakest area, all in one place.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="compare divider" id="compare">
+  <div class="wrap">
+    <div class="try-copy">
+      <span class="eyebrow">Compare with friends</span>
+      <h2>Settle the argument.</h2>
+      <p class="lead">Add your playing partners and see who really has the best short game. Real stats, side by side.</p>
+      <div class="seg" role="tablist" aria-label="Compare section">
+        <button role="tab" id="seg-range" aria-selected="true" data-k="range">Range</button>
+        <button role="tab" id="seg-tee" aria-selected="false" data-k="tee">Tee</button>
+        <button role="tab" id="seg-short" aria-selected="false" data-k="short">Short game</button>
+        <button role="tab" id="seg-putt" aria-selected="false" data-k="putt">Putting</button>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4h8v4a4 4 0 0 1-8 0V4z"/><path d="M8 5H5.5A2.5 2.5 0 0 0 8 9M16 5h2.5A2.5 2.5 0 0 1 16 9"/><path d="M12 13v4M9.5 21h5M10.5 17h3"/></svg></div>
-        <h3>Compete Mode</h3>
-        <p>2–4 players, head-to-head, across Range, Short Game and Putting. Practice you'll actually show up for.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-5 4 4 8-9"/><path d="M15 6.5h5V11"/></svg></div>
-        <h3>Real Analysis</h3>
-        <p>Strokes gained over time, by distance band, by club — measured against a baseline you choose.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.5 3.6-7 8-7s8 2.5 8 7"/></svg></div>
-        <h3>Your Data, Always</h3>
-        <p>Log in and every session you've logged is right there — export or switch profiles any time.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M9 11.5l2 2 4-4.5"/></svg></div>
-        <h3>Coach Connected</h3>
-        <p>Link with your coach in-app. They see your numbers, you see their feedback — no more screenshots.</p>
+      <p class="small">Example players shown.</p>
+    </div>
+
+    <div class="phone phone-sm" aria-label="Compare with friends screen">
+      <div class="screen">
+        <div class="statusbar"><span>9:41</span><span>●●● 100%</span></div>
+        <div class="appbar"><img src="images/logo.jpg" alt=""><b>THE PRACTICE APP</b><span class="pb">PLAYER</span></div>
+        <div class="eyebrow" style="font-family:var(--sys);letter-spacing:.1em;font-size:10px">COMPETE · COMPARE</div>
+        <div style="font-size:22px;margin:2px 0 10px">3 players</div>
+        <div class="legend"><span><i style="background:var(--green-lt)"></i>You</span><span><i style="background:var(--sand)"></i>Jamie</span><span><i style="background:var(--cream)"></i>Alex</span></div>
+        <div class="ccard">
+          <div class="eyebrow" id="cTitle" style="font-family:var(--sys);font-size:10px;color:var(--cream)">RANGE</div>
+          <div id="cSub" style="font-size:10px;color:var(--dim);margin-top:2px">Avg strokes gained per shot</div>
+          <div class="bars" id="bars">
+            <div class="bar"><span class="bv"></span><div class="b" style="background:var(--green-lt)"></div><span class="bn">You</span></div>
+            <div class="bar"><span class="bv"></span><div class="b" style="background:var(--sand)"></div><span class="bn">Jamie</span></div>
+            <div class="bar"><span class="bv"></span><div class="b" style="background:var(--cream)"></div><span class="bn">Alex</span></div>
+          </div>
+        </div>
+        <div class="ccard" style="margin-top:10px;display:flex;align-items:center;gap:10px">
+          <div class="chip" style="width:30px;height:30px;border-radius:9px"><svg style="width:17px;height:17px"><use href="#i-compete"/></svg></div>
+          <div style="font-size:11.5px;line-height:1.35"><b id="cLead">You lead the range</b><div style="color:var(--dim);font-size:10.5px">Jamie wants a rematch</div></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ SCREENSHOTS ============ -->
-<section class="section-tight">
+<section id="coaches">
   <div class="wrap">
-    <div class="eyebrow">Inside the app</div>
-    <h2 class="h2">A look at every section</h2>
-    <div class="grid g3" style="margin-top:40px;">
-      <div class="showcase-item">
-        <img class="shot-img" src="images/shot-distance-control.jpg" alt="Distance control shot log with strokes gained" onclick="openLightbox(this.src,this.alt)"/>
-        <div class="zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
-        <div class="showcase-caption">
-          <h3>Log shots, see strokes gained</h3>
-          <p>Scored against your baseline the moment you log it.</p>
-        </div>
-      </div>
-      <div class="showcase-item">
-        <img class="shot-img" src="images/shot-putting-drills.jpg" alt="Putting drills menu" onclick="openLightbox(this.src,this.alt)"/>
-        <div class="zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
-        <div class="showcase-caption">
-          <h3>Five ways to practice putting</h3>
-          <p>Random, Around the Clock, Start Line, Pace Control, on-course.</p>
-        </div>
-      </div>
-      <div class="showcase-item">
-        <img class="shot-img" src="images/shot-wedge-matrix.jpg" alt="Wedge Matrix yardage builder" onclick="openLightbox(this.src,this.alt)"/>
-        <div class="zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
-        <div class="showcase-caption">
-          <h3>Build your own yardage chart</h3>
-          <p>Every wedge, every swing length, outliers trimmed.</p>
-        </div>
-      </div>
-      <div class="showcase-item">
-        <img class="shot-img" src="images/shot-compete.jpg" alt="Compete head-to-head mode" onclick="openLightbox(this.src,this.alt)"/>
-        <div class="zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
-        <div class="showcase-caption">
-          <h3>Compete head-to-head</h3>
-          <p>2–4 players across Range, Short Game and Putting.</p>
-        </div>
-      </div>
-      <div class="showcase-item">
-        <img class="shot-img" src="images/shot-analysis.jpg" alt="Analysis overview" onclick="openLightbox(this.src,this.alt)"/>
-        <div class="zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
-        <div class="showcase-caption">
-          <h3>Overview at a glance</h3>
-          <p>Sessions, strokes gained and miss distance, all in one place.</p>
-        </div>
-      </div>
-      <div class="showcase-item">
-        <img class="shot-img" src="images/shot-strokes-gained-trend.jpg" alt="Strokes gained over time chart" onclick="openLightbox(this.src,this.alt)"/>
-        <div class="zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
-        <div class="showcase-caption">
-          <h3>Watch your trend line move</h3>
-          <p>Strokes gained over time, filtered by distance or period.</p>
-        </div>
+    <div class="coach">
+      <img class="coach-photo" src="images/photo-coach-player.jpg" loading="lazy" alt="Coach reviewing a player's stats on the app with them on the course">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <span class="eyebrow">For coaches</span>
+        <h2>See every rep between lessons.</h2>
+        <p>Your players practise with purpose. You open the lesson already knowing what to fix.</p>
+      <ul>
+        <li><span class="chip"><svg><use href="#i-analysis"/></svg></span>Every player's stats in one dashboard</li>
+        <li><span class="chip"><svg><use href="#i-clock"/></svg></span>Know who is practising and who isn't</li>
+        <li><span class="chip"><svg><use href="#i-matrix"/></svg></span>Real yardages before you fit a wedge</li>
+        <li><span class="chip"><svg><use href="#i-course"/></svg></span>On-course putting, not just range data</li>
+      </ul>
+        <div><a class="btn btn-ghost" href="coaches.html">See the coach dashboard</a></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ REAL SESSIONS / SHARE ============ -->
-<section class="section-tight">
+<section id="pricing" style="padding-top:0">
   <div class="wrap">
-    <div class="eyebrow">On the range, the course, the green</div>
-    <h2 class="h2">Built to be used mid-session, not after the fact</h2>
-    <p class="lede" style="margin-top:14px;">No end-of-round data entry. Log the shot, see the number, move to the next one — whether that’s a Distance Control session at the range, a short game session on the course, or a putting drill on the practice green.</p>
-    <div class="grid g3" style="margin-top:40px;">
-      <div class="showcase-item">
-        <img class="shot-img" src="images/photo-short-game.jpg" alt="Logging a short game shot live on the course" onclick="openLightbox(this.src,this.alt)"/>
-        <div class="zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
-        <div class="showcase-caption">
-          <h3>Short Game, logged shot by shot</h3>
-          <p>Lie, distance and result-from-hole entered in seconds — the app stays out of the way between shots.</p>
-        </div>
+    <div class="sec-head">
+      <span class="eyebrow">Pricing</span>
+      <h2>Less than a bucket of balls a month.</h2>
+    </div>
+    <div class="plans">
+      <div class="plan">
+        <span class="eyebrow">Monthly</span>
+        <div class="price">£4.99<small>/ month</small></div>
+        <p>Every drill, every stat. Cancel anytime.</p>
       </div>
-      <div class="showcase-item">
-        <img class="shot-img" src="images/photo-around-the-clock.jpg" alt="Around the Clock putting drill on the practice green" onclick="openLightbox(this.src,this.alt)"/>
-        <div class="zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
-        <div class="showcase-caption">
-          <h3>Around the Clock, scored putt by putt</h3>
-          <p>One putt from every distance 3&ndash;10ft, laid out clockwise around the hole &mdash; made it or missed it, logged instantly.</p>
-        </div>
-      </div>
-      <div class="showcase-item">
-        <img class="shot-img" src="images/photo-share-card.jpg" alt="Shareable performance card after a putting session" onclick="openLightbox(this.src,this.alt)"/>
-        <div class="zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
-        <div class="showcase-caption">
-          <h3>Share the result, not just the number</h3>
-          <p>Every session generates a clean, shareable scorecard &mdash; drill, score, strokes gained and date &mdash; ready to send or post.</p>
-        </div>
+      <div class="plan best">
+        <span class="badge">SAVE 35%</span>
+        <span class="eyebrow">Annual</span>
+        <div class="price">£39<small>/ year</small></div>
+        <p>A full season of practice, scored.</p>
       </div>
     </div>
-
-    <div class="showcase-item" style="margin-top:40px;">
-      <img class="shot-img" src="images/photo-range-distance-control.jpg" alt="Logging Distance Control at the range, target 111 yards" onclick="openLightbox(this.src,this.alt)"/>
-      <div class="zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
-      <div class="showcase-caption">
-        <h3>Distance Control, dialled in at the range</h3>
-        <p>Random target, real carry logged against it &mdash; strokes gained updates before the next ball's teed up.</p>
-      </div>
-    </div>
+    <p style="margin-top:18px"><a class="btn btn-ghost" href="pricing.html">Free trial and coach plans</a></p>
   </div>
 </section>
 
-<!-- ============ WHY THIS APP IS DIFFERENT ============ -->
-<section class="section" id="different">
-  <div class="wrap">
-    <div class="eyebrow">Why this app</div>
-    <h2 class="h2">Built for golf practice, not another on-course tracker</h2>
-    <p class="lede" style="margin-top:14px;">Plenty of apps will track your on-course rounds shot by shot — GPS, club tagging, the lot. That's brilliant for some golfers. But we know it's too much for most: too much setup, too much tapping mid-round, too much data to make sense of afterwards.</p>
-    <div class="grid g3" style="margin-top:36px;">
-      <div class="feature-card">
-        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M4 20L20 4"/></svg></div>
-        <h3>No round-by-round setup</h3>
-        <p>Nothing to tag mid-round. Practice sessions take seconds to start.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M4 12h16"/></svg></div>
-        <h3>Built where you improve fastest</h3>
-        <p>The range and the practice green — where the reps that actually move your numbers happen.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg></div>
-        <h3>Simple by design</h3>
-        <p>A handful of numbers that actually matter, not a stats page you need a manual to read.</p>
-      </div>
-    </div>
 
-    <div class="card" style="margin-top:20px;border-color:rgba(201,166,107,0.33);">
-      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:20px;color:var(--sand);margin-bottom:8px;">Scored the way the pros measure it — strokes gained</h3>
-      <p style="font-family:'Inter',sans-serif;font-size:14px;color:var(--cream-dim);line-height:1.6;margin:0;">Every shot compared to a baseline from 30-handicap to PGA Tour. Prefer Par-style scoring instead? <a href="scoring.html" style="color:var(--sand);">See how both work &rarr;</a></p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ LOGIN ============ -->
-<section class="section" id="login">
+<section class="cta" id="join">
   <div class="wrap">
-    <div class="login-grid">
+    <div class="cta-box">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <span class="eyebrow">Launching soon</span>
+        <h2>Your next range session could have a score.</h2>
+      </div>
       <div>
-        <div class="eyebrow">Your data, on demand</div>
-        <h2 class="h2">Log in to see everything you've logged</h2>
-        <p class="lede" style="margin-top:14px;">Every shot, every session, every trend line — tied to your account and waiting the moment you open the app.</p>
-        <p class="lede">This is a preview of what logging in looks like. Real account access lives inside the app itself.</p>
-        <a href="#waitlist" class="btn btn-primary" style="margin-top:10px;">Get the App</a>
-      </div>
-      <div class="login-mock">
-        <img class="logo" src="images/logo.jpg" alt=""/>
-        <h4>LOG IN</h4>
-        <div class="login-field">
-          <label>EMAIL</label>
-          <input type="text" placeholder="you@example.com" disabled/>
-        </div>
-        <div class="login-field">
-          <label>PASSWORD</label>
-          <input type="text" placeholder="••••••••" disabled/>
-        </div>
-        <button class="btn btn-primary" type="button" disabled>LOG IN</button>
-        <div class="fineprint">Preview only — log in from The Practice App on your phone</div>
+        <form id="waitlist" name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field-2">
+          <input type="hidden" name="form-name" value="waitlist">
+          <p class="hp"><label>Leave blank <input name="bot-field-2"></label></p>
+          <input id="email" name="email" type="email" required placeholder="you@email.com" aria-label="Email address">
+          <button class="btn btn-primary" type="submit">Join the waitlist</button>
+        </form>
+        <p class="formnote" id="formnote">Early members get launch pricing locked in.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ============ WAITLIST / FOOTER CTA ============ -->
-<section class="section-tight" id="waitlist" style="background:var(--turf);border-top:1px solid var(--border);">
-  <div class="wrap" style="text-align:center;">
-    <h2 class="h2">Be first to know when it's live</h2>
-    <p class="lede" style="margin:14px auto 26px;">No spam — one email when The Practice App hits the App Store, plus your early-access discount code.</p>
-    <form style="max-width:440px;margin:0 auto;display:flex;gap:10px;flex-wrap:wrap;justify-content:center;" name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field-2" onsubmit="handleWaitlist(event)">
-      <input type="hidden" name="form-name" value="waitlist"/>
-      <p style="position:absolute;left:-9999px;" aria-hidden="true"><label>Don't fill this out: <input name="bot-field-2"/></label></p>
-      <input type="email" name="email" required placeholder="you@example.com" style="flex:1;min-width:220px;background:var(--turf-dark);border:1px solid var(--border);border-radius:8px;color:var(--cream);font-family:'Inter',sans-serif;font-size:14px;padding:13px 14px;"/>
-      <button class="btn btn-primary" type="submit">Notify Me</button>
-    </form>
   </div>
 </section>
 
 <footer>
-  <div class="wrap footer-inner">
-    <a href="index.html" class="brand"><img src="images/logo.jpg" alt="" style="width:20px;height:20px;"/> THE PRACTICE APP</a>
-    <div class="footer-links">
-      <a href="index.html#features">Features</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="coaches.html">Coaches</a>
-      <a href="faq.html">FAQ</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <div class="footer-note">© 2026 The Practice App. Screenshots shown are from the live product build.</div>
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="images/logo.jpg" alt="">THE PRACTICE APP</a>
+    <a href="mailto:info@thepracticeapp.co.uk">info@thepracticeapp.co.uk</a>
+    <div class="links"><a href="scoring.html">Scoring</a><a href="why-practice.html">Why practice</a><a href="coaches.html">Coaches</a><a href="pricing.html">Pricing</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div>
   </div>
 </footer>
-<div id="toast"></div>
-
-<div id="lightbox" onclick="closeLightbox()">
-  <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Close">&times;</button>
-  <img id="lightbox-img" src="" alt=""/>
-</div>
-
-<script src="script.js"></script>
+<script src="site.js"></script>
 </body></html>
